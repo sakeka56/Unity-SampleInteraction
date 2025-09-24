@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 647658b92b7be7a4a88d6ff83b9a44f0, type: 3}
-  m_Name: TestCube
+  m_Name: TestCube 1
   m_EditorClassIdentifier: 
-  itemName: TestCube
-  description: This is a test cube description
-  itemIcon: {fileID: 0}
+  ItemName: TestCube1
+  ItemID: 1
+  Description: 'This''s a TestCube description!
+
+    This''s a TestCube description!'
+  ItemIcon: {fileID: 21300000, guid: 3e9d671bf45d62146803743c32261550, type: 3}
+  Quantity: 2

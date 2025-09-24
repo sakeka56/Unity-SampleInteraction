@@ -5,20 +5,23 @@
 
 ## 当前功能
 - 可交互物品信息UI的显示（名称、描述、图标）
-- 暂时只有显示
+- 拾取到背包
 
 ## 计划开发的功能
 - 交互系统完善
 - 背包与物品管理
 - UI 优化
+- 代码结构优化
 
 ## 存在已知问题
-- 多个Interaction物体时，UI显示异常
+- 
 
 ## 使用方法
 1. 将Interaction.cs脚本挂载到可交互物体上
-2. 创建 ItemData资源并赋值给 Interaction 组件
-3. 将playerInteraction脚本挂载到玩家上
+2. 创建 InteractionData资源并赋值给 Interaction 组件
+3. 将Interactor脚本挂载到玩家上
+4. 挂载IvenrotyUI并对UI面板赋值
+
 -----------------
 主要脚本位于 `Assets/Scripts` 文件夹下
 
@@ -31,20 +34,22 @@ A simple pickup interaction system developed with Unity, suitable for third-pers
 
 ## Current Features
 - Display of interactive item information UI (name, description, icon)
-- Currently only supports display
+- Pick up to the Inventory
 
 ## Planned Features
 - Improved interaction system
 - Inventory and item management
 - UI optimization
+- Code structure optimization
 
 ## Known Issues
-- UI display is abnormal when there are multiple Interaction objects
+- 
 
 ## Usage
-1. Attach the Interaction.cs script to interactive objects
-2. Create an ItemData asset and assign it to the Interaction component
-3. Attach the playerInteraction script to the player
+1. Attach the Interaction.cs script to the interactive object.
+2. Create an InteractionData resource and assign it to the Interaction component.
+3. Attach the Interactor script to the player.
+4. Attach InventoryUI and assign values to the UI panel.
 -----------------
 Main scripts are located in the `Assets/Scripts` folder
 

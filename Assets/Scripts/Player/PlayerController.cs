@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,12 +8,33 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController characterController;
 
+    public Interactor Interactor;
+
+    public event UnityAction OnInteractioned;
+    public event UnityAction OnInventoryToggled;
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
     }
 
     void Update()
+    {
+           
+        Move();
+
+        if (Input.GetKeyDown(KeyCode.E) && Interactor != null)
+        {
+            OnInteractioned?.Invoke();
+        }
+
+        if(Input.GetKeyDown(KeyCode.B))
+        {
+            OnInventoryToggled?.Invoke();
+        }
+    }
+
+
+    private void Move()
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -32,5 +54,10 @@ public class PlayerController : MonoBehaviour
 
         if (move != Vector3.zero)
             transform.forward = move;
+    }
+
+    public void Teleport(Vector3 teleportPos)
+    {
+        transform.position = teleportPos;
     }
 }

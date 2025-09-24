@@ -3,8 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewItemData", menuName = "Inventory/Item Data")]
 public class ItemData : ScriptableObject
 {
-    public string itemName;
+    public string ItemName;
+    public string ItemID;
     [TextArea]
-    public string description;
-    public Sprite itemIcon;
+    public string Description;
+    public Sprite ItemIcon;
+    public int Quantity;
 }
